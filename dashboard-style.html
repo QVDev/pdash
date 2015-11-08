@@ -1,0 +1,56 @@
+<style is="custom-style">
+
+body {
+  background-color: var(--paper-blue-grey-500);
+  font-family: 'Roboto', 'Noto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 24px;
+}
+
+section {
+  padding: 20px 0;
+}
+
+section > div {
+  padding: 14px;
+  font-size: 16px;
+}
+
+#cards {
+  @apply(--layout-vertical);
+  @apply(--center-justified);
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.card-content {
+    font-size: 22px;
+    color: var(--paper-green-a700);
+    padding: 10px 0;
+    line-height: 42px;
+    background-color: var(--paper-grey-50);
+  }
+
+paper-header-panel {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+    @apply(--shadow-elevation-16dp);
+  }
+
+  .paper-header {
+    font-size: 16px;
+    line-height: 42px;
+    padding: 0 0;
+    color: white;
+    transition: height 0.2s;
+  }
+
+.blue .paper-header {
+    background-color: var(--paper-light-blue-500);
+  }
+</style>

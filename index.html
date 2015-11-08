@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>paper-card demo</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+  <link rel="import" href="bower_components/firebase-element/firebase.html">
+  <link rel="import" href="bower_components/firebase-element/firebase-collection.html">
+  <link rel="import" href="bower_components/paper-card/paper-card.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="bower_components/paper-styles/color.html">
+
+  <link rel="import" href="dashboard-style.html">
+
+</head>
+<body unresolved>
+  <div id="cards">
+
+    <section>
+      <template is="dom-bind" id="app">
+      <firebase-collection
+      location="https://pdash.firebaseio.com/"
+      data="{{temps}}"></firebase-collection>
+  
+        <template is="dom-repeat" items="[[temps]]" as="temp">
+          
+          <paper-header-panel class="blue">
+            <div class="paper-header">[[temp.description]]</div>
+            <div class="card-content"> <b>[[temp.value]]</b></div>
+          </paper-header-panel>
+        
+      </template>
+    </section>
+  
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
+  
+  
+  
+<!--</body>-->
+<!--</html>-->
