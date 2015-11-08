@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <title>Home Dashboard</title>
@@ -16,6 +15,7 @@
   <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
   <link rel="import" href="bower_components/iron-icons/iron-icons.html">
   <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
   <link rel="import" href="bower_components/paper-styles/color.html">
 
   <link rel="import" href="dashboard-style.html">
@@ -27,6 +27,7 @@
     <b class="paper-header">Dashboard</b>
 
     <section>
+      <paper-spinner active></paper-spinner>
       <template is="dom-bind" id="app">
       <firebase-collection
       location="https://pdash.firebaseio.com/"
@@ -48,8 +49,3 @@
 
 </body>
 </html>
-  
-  
-  
-<!--</body>-->
-<!--</html>-->
